@@ -1,1 +1,172 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --color-principal: #f3ed1a;
+    --color-secundario:#D6D900;
+    --color-bordes:#ACB000;
+    --color-boton-1:#E0263E;
+    --color-boton-2:#AD0C21;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    display: grid;
+    grid-template-columns: 100px 500px 100px;
+    grid-template-rows: 200px 80px;
+    width: 700px;
+    margin: auto;
+    margin-top: 200px;
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        grid-template-columns: 50px 200px 50px;
+        width: 300px;
+        margin-top: 80px;
+    }
+}
+
+/* ARROW BUTTONS*/
+.arrow-container{
+    background-color: var(--color-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-container-1{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+    border-right: 5px groove var(--color-bordes);
+}
+
+
+.arrow-container-2{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 100%;
+    background-color: var(--color-secundario);
+    border-left:5px groove var(--color-bordes);
+}
+
+
+.button{
+    background-image: radial-gradient(var(--color-boton-1),var(--color-boton-2));
+    color: white;
+}
+
+
+.arrow{
+    width: 80px;
+    height: 80px;
+    border: none;
+}
+
+@media screen and (max-width: 700px){
+    .arrow{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+.left-arrow{
+    clip-path: polygon(70% 0, 25% 50%, 70% 100%);
+}
+
+.right-arrow{
+    clip-path: polygon(30% 0, 75% 50%, 30% 100%);
+}
+
+/* POKEMON COPNTAINER*/
+.pokemon-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pokemon-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.side-card{
+    filter: brightness(0.5);
+    justify-content: center;
+}
+
+.pokemon-img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 700px){
+    .side-pokemon-image{
+        width: 0;
+    }
+}
+
+/* PANEL */
+.panel{
+    background-color: var(--color-principal);
+    background-image: linear-gradient(to right, var(--color-principal),var(--color-secundario));
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 700px){
+    .panel{
+        justify-content: space-evenly;
+    }
+}
+
+
+.theme-button{
+    clip-path: circle(50.0% at 50% 50%);
+    height: 40px;
+    align-self: center;
+    width: 40px;
+    border: none;
+    justify-self: start;
+}
+
+@media only screen and (max-width: 700px){
+    .theme-button{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+
+.id-input{
+    height: 20px;
+    align-self: center;
+}
+
+@media only screen and (max-width: 700px){
+    .id-input{
+        width: 50px;
+    }
+}
+
+.search-button{
+    height: 40px;
+    align-self: center;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+@media only screen and (max-width: 700px){
+    .search-button{
+        font-size: .7rem;
+        padding-top: 0;
+    }
+}
