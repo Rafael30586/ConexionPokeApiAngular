@@ -4,9 +4,15 @@
     --color-bordes:#ACB000;
     --color-boton-1:#E0263E;
     --color-boton-2:#AD0C21;
+    --screen-color:#839E83;
+    --body-color:#3B3B3B;
 }
 
 /* MAIN CONTAINER */
+
+body{
+    background-color: var(--body-color);
+}
 
 .container{
     display: grid;
@@ -15,6 +21,8 @@
     width: 700px;
     margin: auto;
     margin-top: 200px;
+    background-color: var(--screen-color);
+    border-radius: 20px;
 }
 
 @media screen and (max-width: 700px){
@@ -56,6 +64,10 @@
     color: white;
 }
 
+button:hover{
+    opacity: 0.6;
+}
+
 
 .arrow{
     width: 80px;
@@ -83,6 +95,8 @@
 .pokemon-container{
     display: flex;
     justify-content: space-evenly;
+    padding: 10px;
+    color: white;
 }
 
 .pokemon-card{
@@ -146,8 +160,22 @@
 
 
 .id-input{
-    height: 20px;
+    height: 30px;
     align-self: center;
+    text-align: center;
+    font-size: 1rem;
+    background-color: var(--screen-color);
+    color: white;
+    border:none;
+    border-bottom: 3px solid var(--color-bordes);
+}
+
+.id-input:focus{
+    outline: none;
+}
+
+.id-input:invalid{
+    color:red;
 }
 
 @media only screen and (max-width: 700px){
