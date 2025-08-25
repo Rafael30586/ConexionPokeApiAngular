@@ -38,6 +38,11 @@
     --body-color:#3B3B3B;
 }
 
+@keyframes aparecer{
+    from{opacity: 0;}
+    to{opacity:1;}
+}
+
 /* MAIN CONTAINER */
 
 body{
@@ -92,6 +97,7 @@ body{
 .button{
     background-image: radial-gradient(var(--color-boton-principal),var(--color-boton-secundario));
     color: white;
+    cursor: pointer;
 }
 
 button:hover{
@@ -188,6 +194,18 @@ button:hover{
     }
 }
 
+form{
+    display: flex;
+    justify-content: space-around;
+    gap:50px
+}
+
+@media only screen and (max-width: 700px){
+    form{
+        gap:10px;
+        justify-content: center;
+    }
+}
 
 .id-input{
     height: 30px;
@@ -234,15 +252,21 @@ button:hover{
 .theme-1-left-arrow{
     background-color: var(--color-principal);
     border-right: 5px groove var(--color-bordes);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-1-right-arrow{
     background-color: var(--color-secundario);
     border-left: 5px groove var(--color-bordes);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-1-panel{
     background-image: linear-gradient(to right, var(--color-principal),var(--color-secundario));
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-1-button{
@@ -259,15 +283,21 @@ button:hover{
 .theme-2-left-arrow{
     background-color: var(--color-principal-2);
     border-right: 5px groove var(--color-bordes-2);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-2-right-arrow{
     background-color: var(--color-secundario-2);
     border-left: 5px groove var(--color-bordes-2);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-2-panel{
     background-image: linear-gradient(to right, var(--color-principal-2),var(--color-secundario-2));
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-2-button{
@@ -284,15 +314,21 @@ button:hover{
 .theme-3-left-arrow{
     background-color: var(--color-principal-3);
     border-right: 5px groove var(--color-bordes-3);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-3-right-arrow{
     background-color: var(--color-secundario-3);
     border-left: 5px groove var(--color-bordes-3);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-3-panel{
     background-image: linear-gradient(to right, var(--color-principal-3),var(--color-secundario-3));
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-3-button{
@@ -309,15 +345,21 @@ button:hover{
 .theme-4-left-arrow{
     background-color: var(--color-principal-4);
     border-right: 5px groove var(--color-bordes-4);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-4-right-arrow{
     background-color: var(--color-secundario-4);
     border-left: 5px groove var(--color-bordes-4);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-4-panel{
     background-image: linear-gradient(to right, var(--color-principal-4),var(--color-secundario-4));
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-4-button{
@@ -334,15 +376,21 @@ button:hover{
 .theme-5-left-arrow{
     background-color: var(--color-principal-5);
     border-right: 5px groove var(--color-bordes-5);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-5-right-arrow{
     background-color: var(--color-secundario-5);
     border-left: 5px groove var(--color-bordes-5);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-5-panel{
     background-image: linear-gradient(to right, var(--color-principal-5),var(--color-secundario-5));
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-5-button{
@@ -359,15 +407,21 @@ button:hover{
 .theme-6-left-arrow{
     background-color: var(--color-principal-6);
     border-right: 5px groove var(--color-bordes-6);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-6-right-arrow{
     background-color: var(--color-secundario-6);
     border-left: 5px groove var(--color-bordes-6);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-6-panel{
     background-image: linear-gradient(to right, var(--color-principal-6),var(--color-secundario-6));
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-6-button{
@@ -384,15 +438,21 @@ button:hover{
 .theme-7-left-arrow{
     background-color: var(--color-principal-7);
     border-right: 5px groove var(--color-bordes-7);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-7-right-arrow{
     background-color: var(--color-secundario-7);
     border-left: 5px groove var(--color-bordes-7);
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-7-panel{
     background-image: linear-gradient(to right, var(--color-principal-7),var(--color-secundario-7));
+    animation-name: aparecer;
+    animation-duration: 1s;
 }
 
 .theme-7-button{

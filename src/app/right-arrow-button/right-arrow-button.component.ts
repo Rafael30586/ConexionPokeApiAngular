@@ -10,7 +10,7 @@ export class RightArrowButtonComponent implements DoCheck{
   @Input() theme?: number
 
   ngDoCheck(): void {
-    console.log(`RightArrow, Theme: ${this.theme}`)
+    //console.log(`RightArrow, Theme: ${this.theme}`)
   }
 
 }

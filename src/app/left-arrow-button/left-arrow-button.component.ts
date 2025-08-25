@@ -10,7 +10,7 @@ export class LeftArrowButtonComponent implements DoCheck{
   @Input() theme?: number
 
   ngDoCheck(): void {
-    console.log(`LeftArrow, Theme: ${this.theme}`)
+    //console.log(`LeftArrow, Theme: ${this.theme}`)
   }
 
 }
