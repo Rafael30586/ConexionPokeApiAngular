@@ -1,7 +1,7 @@
 export interface IPokemon{
     id: number,
     name: string,
-    types: TypeA[] | undefined,
+    types: ITypeA[] | undefined,
     sprites: ISprites
 }
 
@@ -10,11 +10,11 @@ export interface ISprites{
     back_default: string
 }
 
-export interface TypeA{
+export interface ITypeA{
     slot:number
-    type: Type
+    type: IType
 }
 
-export interface Type{
+export interface IType{
     name: string
 }

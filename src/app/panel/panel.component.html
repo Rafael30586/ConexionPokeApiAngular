@@ -5,7 +5,7 @@
         <section class="panel theme-1-panel">
             <button class="button theme-button theme-1-button" (click)="changeTheme()"></button>
             <form action="" [formGroup]="porkemonIdForm" (ngSubmit)="onSubmit($event)">
-                <input type="number" placeholder="151" name="id" class="id-input theme-1-input" min="1" formControlName="id">
+                <input type="number" placeholder="151" name="id" class="id-input theme-1-input" min="1" formControlName="id" [(ngModel)]="pokemonId">
                 <button class="button search-button theme-1-button" type="submit">SEARCH</button>
             </form>
             

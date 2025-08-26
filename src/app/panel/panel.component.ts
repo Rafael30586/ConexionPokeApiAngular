@@ -1,8 +1,9 @@
-import { Component, DoCheck, Input } from '@angular/core';
+import { Component, DoCheck, Input, Output } from '@angular/core';
 import { ThemeService } from '../services/theme.service';
 import { PokeApiService } from '../services/poke-api.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IPokemon } from '../models/pokemon.model';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-panel',
@@ -12,6 +13,12 @@ import { IPokemon } from '../models/pokemon.model';
 export class PanelComponent implements DoCheck{
   
   @Input() theme?: number
+  @Output() messageEvent = new EventEmitter<number>()
+  pokemonId?: number
+
+  sendPokemonId(){
+    this.messageEvent.emit(this.pokemonId)
+  }
 
   porkemonIdForm: FormGroup
 
@@ -36,6 +43,7 @@ export class PanelComponent implements DoCheck{
         console.log(data)
       }
     })
+    this.sendPokemonId()
   }
 
   ngDoCheck(): void {

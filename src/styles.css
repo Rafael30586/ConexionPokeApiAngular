@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
 :root{
     --color-principal: #f3ed1a;
     --color-secundario:#D6D900;
@@ -47,6 +49,8 @@
 
 body{
     background-color: var(--body-color);
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
 }
 
 .container{
@@ -133,23 +137,25 @@ button:hover{
     justify-content: space-evenly;
     padding: 10px;
     color: white;
+    font-size: .7rem;
+    
 }
 
 .pokemon-card{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 10px;
+    justify-content: center;
+    gap: 0;
 }
 
 .side-card{
-    filter: brightness(0.5);
+    filter: brightness(0.1);
     justify-content: center;
 }
 
 .pokemon-img{
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
@@ -159,6 +165,22 @@ button:hover{
     .side-pokemon-image{
         width: 0;
     }
+}
+
+.pokemon-data{
+    background-color: var(--body-color);
+    padding: 3px;
+    text-align: center;
+}
+
+.pokemon-name{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.pokemon-number{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 /* PANEL */

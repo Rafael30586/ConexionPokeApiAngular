@@ -1,17 +1,17 @@
 <section class="pokemon-container">
     <div class="pokemon-card side-card">
-        <img src="https://wallpapercave.com/wp/wp1935318.jpg" alt="Foto de un pokemon"
-            class="pokemon-img side-pokemon-image">
+        <img src={{leftPokemon?.sprites?.front_default}} 
+        alt="Foto de un pokemon" class="pokemon-img side-pokemon-image">
     </div>
     <div class="pokemon-card main-card">
         <img src={{mainPokemon?.sprites?.front_default}}
             alt="Foto de un pokemon" class="pokemon-img">
-        <span class="pokemon-name">Name: {{mainPokemon?.name}}</span>
-        <span class="pokemon-type">Type: </span>
-        <span class="pokemon-number">Number: {{mainPokemon?.id}}</span>
+        <span class="pokemon-data pokemon-name">Name: {{mainPokemon?.name}}</span>
+        <span class="pokemon-data pokemon-type">Type: {{mainPokemon?.types?.[0]?.type?.name}}</span>
+        <span class="pokemon-data pokemon-number">Number: {{mainPokemon?.id}}</span>
     </div>
     <div class="pokemon-card side-card">
-        <img src="https://wallpapers.com/images/featured/charizard-pokemon-pictures-z0uot60vcwes3pvk.jpg"
+        <img src={{rightPokemon?.sprites?.front_default}}
             alt="Foto de un pokemon" class="pokemon-img side-pokemon-image">
     </div>
 </section>

@@ -24,6 +24,17 @@ export class PokemonContainerComponent implements DoCheck, OnChanges{
         this.mainPokemon = data
       }
     })
+    this._pokeApiService.getLeftPokemon(this.mainPokemonId).subscribe({
+      next: (data: IPokemon) => {
+        this.leftPokemon = data
+      }
+    })
+    this._pokeApiService.getRightPokemon(this.mainPokemonId).subscribe({
+      next: (data: IPokemon) => {
+        this.rightPokemon = data
+      }
+    })
+    
   }
 
   ngDoCheck(): void {
