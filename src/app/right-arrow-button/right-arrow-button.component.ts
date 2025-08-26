@@ -1,4 +1,4 @@
-import { Component, DoCheck, Input } from '@angular/core';
+import { Component, DoCheck, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-right-arrow-button',
@@ -8,6 +8,12 @@ import { Component, DoCheck, Input } from '@angular/core';
 export class RightArrowButtonComponent implements DoCheck{
 
   @Input() theme?: number
+  @Output() messageEvent = new EventEmitter<number>()
+  forward: number = 1
+
+  sendNumberOne(){
+    this.messageEvent.emit(this.forward)
+  }
 
   ngDoCheck(): void {
     //console.log(`RightArrow, Theme: ${this.theme}`)

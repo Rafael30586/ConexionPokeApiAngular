@@ -1,4 +1,5 @@
-import { Component, DoCheck, Input } from '@angular/core';
+import { Component, DoCheck, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-left-arrow-button',
@@ -8,6 +9,12 @@ import { Component, DoCheck, Input } from '@angular/core';
 export class LeftArrowButtonComponent implements DoCheck{
 
   @Input() theme?: number
+  @Output() messageEvent = new EventEmitter<number>()
+  backwards: number = -1
+
+  sendNegativeOne(){
+    this.messageEvent.emit(this.backwards)
+  }
 
   ngDoCheck(): void {
     //console.log(`LeftArrow, Theme: ${this.theme}`)

@@ -45,6 +45,22 @@
     to{opacity:1;}
 }
 
+@keyframes animacion-pokemon {
+    0%{
+        transform: translateY(5px);
+    }
+    40%{
+        transform: translateY(0);
+    }
+    60%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+    
+}
+
 /* MAIN CONTAINER */
 
 body{
@@ -159,6 +175,12 @@ button:hover{
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
+}
+
+.main-pokemon{
+    animation-name: animacion-pokemon;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
 }
 
 @media only screen and (max-width: 700px){

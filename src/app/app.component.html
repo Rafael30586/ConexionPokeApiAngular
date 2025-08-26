@@ -1,6 +1,6 @@
 <div class="container">
-    <app-left-arrow-button [theme]="theme"></app-left-arrow-button>
-    <app-right-arrow-button [theme]="theme"></app-right-arrow-button>
+    <app-left-arrow-button [theme]="theme" (messageEvent)="receiveMinusOne($event)"></app-left-arrow-button>
+    <app-right-arrow-button [theme]="theme" (messageEvent)="receiveNumberOne($event)"></app-right-arrow-button>
     <app-pokemon-container [theme]="theme" [mainPokemonId]="mainPokemonId"></app-pokemon-container>
     <app-panel [theme]="theme" (messageEvent)="receivePokemonId($event)"></app-panel>
 </div>
