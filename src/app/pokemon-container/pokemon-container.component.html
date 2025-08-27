@@ -4,11 +4,14 @@
         alt="Foto de un pokemon" class="pokemon-img side-pokemon-image">
     </div>
     <div class="pokemon-card main-card">
-        <img src={{mainPokemon?.sprites?.front_default}}
-            alt="Foto de un pokemon" class="pokemon-img main-pokemon">
-        <span class="pokemon-data pokemon-name">Name: {{mainPokemon?.name}}</span>
-        <span class="pokemon-data pokemon-type">Type: {{mainPokemon?.types?.[0]?.type?.name}}</span>
-        <span class="pokemon-data pokemon-number">Number: {{mainPokemon?.id}}</span>
+        <img src={{mainPokemon?.sprites?.front_default}} title={{mainPokemon?.name}}
+            alt={{mainPokemon?.name}} class="pokemon-img main-pokemon">
+        <span class="pokemon-data pokemon-name" title="Name">{{mainPokemon?.name | titlecase}} </span>
+        <ng-container [ngSwitch]="typesLength">
+            <span *ngSwitchCase="1" class="pokemon-data pokemon-type" title="Type">{{mainPokemon?.types?.[0]?.type?.name}}</span>
+            <span *ngSwitchCase="2" class="pokemon-data pokemon-type" title="Types">{{mainPokemon?.types?.[0]?.type?.name}} / {{mainPokemon?.types?.[1]?.type?.name}}</span>
+        </ng-container>
+        <span class="pokemon-data pokemon-number" title="ID">{{mainPokemon?.id}}</span>
     </div>
     <div class="pokemon-card side-card">
         <img src={{rightPokemon?.sprites?.front_default}}

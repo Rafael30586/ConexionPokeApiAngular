@@ -38,11 +38,16 @@
     --color-boton-secundario-7:#D11761;
     --screen-color:#839E83;
     --body-color:#3B3B3B;
+    --pokemon-name-color:#A3FF78;
 }
 
 @keyframes aparecer{
-    from{opacity: 0;}
-    to{opacity:1;}
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity:1;
+    }
 }
 
 @keyframes animacion-pokemon {
@@ -161,6 +166,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 0;
 }
 
@@ -190,17 +196,28 @@ button:hover{
 }
 
 .pokemon-data{
-    background-color: var(--body-color);
+    /*background-color: var(--body-color);*/
     padding: 3px;
     text-align: center;
+    background-color: var(--body-color)
 }
 
 .pokemon-name{
+    font-size: 1.2em;
+    color: var(--pokemon-name-color);
+    align-self: stretch;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
+.pokemon-type{
+    color:white;
+    align-self: stretch;
+}
+
 .pokemon-number{
+    color:white;
+    align-self: stretch;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -260,6 +277,7 @@ form{
     color: white;
     border:none;
     border-bottom: 3px solid var(--color-bordes);
+    width: 200px;
 }
 
 .id-input:focus{

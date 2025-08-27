@@ -1,7 +1,7 @@
 export interface IPokemon{
     id: number,
     name: string,
-    types: ITypeA[] | undefined,
+    types: ITypeA[],
     sprites: ISprites
 }
 
@@ -17,4 +17,9 @@ export interface ITypeA{
 
 export interface IType{
     name: string
+}
+
+export interface AllPokemon{
+    count: number,
+    next: string
 }

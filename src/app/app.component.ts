@@ -14,6 +14,7 @@ export class AppComponent implements DoCheck, OnInit{
   
   theme?: number
   mainPokemonId: number = 81
+  pokemonCount?: number
 
   constructor(private _themeService: ThemeService){}
 
@@ -29,6 +30,10 @@ export class AppComponent implements DoCheck, OnInit{
     this.mainPokemonId += forward
   }
 
+  receivePokemonCount(pokemonCount: number){
+    this.pokemonCount = pokemonCount
+  }
+
   ngOnInit(): void {
     this.theme = this._themeService.getTheme()
   }
@@ -37,6 +42,7 @@ export class AppComponent implements DoCheck, OnInit{
     this.theme = this._themeService.getTheme()
     //console.log('AppComponent', `theme: ${this.theme}`)
     //console.log('Pokemon Id: ',this.mainPokemonId)
+    console.log("Output: ", this.pokemonCount)
   }
 
 }

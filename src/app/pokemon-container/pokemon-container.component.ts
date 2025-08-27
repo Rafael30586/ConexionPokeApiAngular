@@ -15,6 +15,8 @@ export class PokemonContainerComponent implements DoCheck, OnChanges{
   mainPokemon?: IPokemon
   leftPokemon?: IPokemon
   rightPokemon?: IPokemon
+
+  typesLength?: number 
   
   constructor(private _pokeApiService: PokeApiService){}
 
@@ -22,6 +24,7 @@ export class PokemonContainerComponent implements DoCheck, OnChanges{
     this._pokeApiService.getPokemonById(this.mainPokemonId).subscribe({
       next: (data: IPokemon) => {
         this.mainPokemon = data
+        this.typesLength = this.mainPokemon.types.length
       }
     })
     this._pokeApiService.getLeftPokemon(this.mainPokemonId).subscribe({
@@ -39,6 +42,7 @@ export class PokemonContainerComponent implements DoCheck, OnChanges{
 
   ngDoCheck(): void {
     //console.log(`PokemonContainer, Theme: ${this.theme}`)
+    //console.log('Types: ',this.typesLength)
   }
 
 }

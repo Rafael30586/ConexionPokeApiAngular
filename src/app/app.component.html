@@ -2,5 +2,5 @@
     <app-left-arrow-button [theme]="theme" (messageEvent)="receiveMinusOne($event)"></app-left-arrow-button>
     <app-right-arrow-button [theme]="theme" (messageEvent)="receiveNumberOne($event)"></app-right-arrow-button>
     <app-pokemon-container [theme]="theme" [mainPokemonId]="mainPokemonId"></app-pokemon-container>
-    <app-panel [theme]="theme" (messageEvent)="receivePokemonId($event)"></app-panel>
+    <app-panel [theme]="theme" (messageEvent)="receivePokemonId($event)" (messageEvent2)="receivePokemonCount($event)"></app-panel>
 </div>
